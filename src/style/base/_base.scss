@@ -1,0 +1,37 @@
+
+@mixin rowJC {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+}
+
+@mixin rowJB {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+@mixin rowJA {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+@mixin columnJC {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+@mixin columnJA {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+@mixin columnJB {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
