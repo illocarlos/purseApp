@@ -1,9 +1,9 @@
+$gradient: linear-gradient(20deg, #08FFB8, #5799F7);
 
 @mixin rowJC {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-
 }
 
 @mixin rowJB {
@@ -35,25 +35,36 @@
     flex-flow: row nowrap;
     justify-content: space-between;
 }
-:root{
+
+:root {
     --black: #191919;
---gren:rgba(11, 249, 205);
---blue:rgb(11, 102, 249);
---greyB:rgb(76, 101, 141);
---greyG:rgb(76, 141, 133);
---white:rgb(214, 226, 225);;
+    --green: rgb(11, 249, 205);
+    --blue: rgb(11, 162, 249);
+    --greyB: rgb(76, 101, 141);
+    --greyG: rgb(76, 141, 133);
+    --white: rgb(214, 226, 225); 
 }
-html{
-    font-size: 62,5%;
+
+html {
+    font-size: 62.5%; 
     box-sizing: border-box;
 }
+
 *,
 *:before,
-*:after{
-box-sizing: inherit;
+*:after {
+    box-sizing: inherit;
 }
-body{
+
+body {
+    height: 100%; 
     font-size: 1.6rem;
-    font-family: "lato",sans-serif ;
-    background-color:var(--gren);
+    font-family: "lato", sans-serif;
 }
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+
