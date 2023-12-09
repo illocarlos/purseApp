@@ -1,0 +1,94 @@
+.modal{
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+
+.close-modal{
+position: absolute;
+top: 3rem;
+right: 3rem;
+}
+.close-modal img{ 
+    width: 3rem;
+    cursor: pointer;
+}
+.container{
+    background-color: transparent;
+}
+.container-form{
+    transition-property:all  ;
+    transition-duration: 800ms;
+    transition-timing-function:ease-in ;
+    opacity: 0;
+}
+
+.container-form.active{
+   
+    opacity: 1;
+}
+.container-form.close{
+   
+    opacity: 0;
+}
+
+
+.new-quantity{
+    border-radius: 2rem;
+     background-color:var(--green);
+   margin: 10rem  auto  0 auto; 
+
+}
+.title-legend{
+   
+    text-transform: uppercase;
+       font-size: 2.4rem;
+     font-weight: 900;
+    text-align: center;
+}
+.camp{
+
+display: grid;
+gap: 2rem;
+    
+}
+
+.camp label{
+    text-align: center;
+         font-weight: 900;
+}
+.camp select,
+.camp input{
+    background-color: rgb(255, 255, 255);
+ border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+    font-size: 2.2rem;
+}
+.btn-modal{
+    @include rowJC;
+    margin-bottom: 1rem;
+    
+}
+button{
+     font-weight: 900;
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 2rem;
+    transition: 1s ease;
+}
+button:hover{
+    background-color: var(--greyB);
+    color: white;
+     width: 30%;
+   
+}
+}
+
+
+

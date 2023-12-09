@@ -5,6 +5,11 @@ $gradient: linear-gradient(20deg, #08FFB8, #5799F7);
     flex-flow: row nowrap;
     justify-content: center;
 }
+@mixin rowJS {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+}
 
 @mixin rowJB {
     display: flex;
@@ -38,10 +43,10 @@ $gradient: linear-gradient(20deg, #08FFB8, #5799F7);
 
 :root {
     --black: #191919;
-    --green: rgb(11, 249, 205);
+    --green: rgb(232, 184, 75);
     --blue: rgb(11, 162, 249);
     --greyB: rgb(76, 101, 141);
-    --greyG: rgb(76, 141, 133);
+    --greyG: rgb(66, 143, 134);
     --white: rgb(214, 226, 225); 
 }
 

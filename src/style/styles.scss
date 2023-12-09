@@ -2,7 +2,10 @@
 @import './base/base';
 
 // component
-
+@import'./components/Modal';
+@import './components/ControlPlanner';
+@import'./components/Planner';
+@import'./components/Alert';
 
 //page
 @import './pages/AppVue';

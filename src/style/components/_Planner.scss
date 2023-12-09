@@ -1,0 +1,44 @@
+.planner{
+     font-weight: 900;
+text-align: center;
+width: 100%;
+display: grid;
+gap: 2rem;
+font-size: 2.8rem;
+color: var(--blue);
+text-transform: uppercase;
+
+
+
+
+
+.new-Planner{
+border-radius: 1rem;
+padding: 1rem;
+border: none;
+font-size: 2.2rem;
+text-align: center;
+}
+
+
+.btn-planner{
+         font-weight: 900;
+
+    border-radius: 20rem;
+    border: none;
+background-color: var(--green);
+cursor: pointer;
+padding: 1rem;
+transition: 1s ease;
+}
+.btn-planner:hover{
+background-color: var(--blue);
+cursor: pointer;
+color: white;
+padding: 1.2rem;
+text-align: center;
+}
+
+
+
+}

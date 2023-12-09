@@ -8,3 +8,35 @@ margin: 0;
 color: var( --blue);
 text-align: center;
 }
+
+.container{
+background-color: white;
+width: 90%;
+max-width: 80rem;
+margin: 0 auto;
+}
+.container-header {
+margin-top: -5rem;
+transform: translateY(5rem);
+padding: 5rem;
+}
+.shadow{
+box-shadow: -57px 46px 17px 0px rgba(0,0,0,0.1);
+border-radius: 1.2rem;
+padding: 5rem;
+}
+.createExpensive{
+position: fixed;
+bottom:5rem ;
+right: 5rem;
+}
+.createExpensive img{
+    width: 5rem;
+    cursor: pointer;
+    transition: 1s ease;
+}
+.createExpensive img:hover{
+    width: 6rem;
+    
+}
+
