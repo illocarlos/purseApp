@@ -1,15 +1,17 @@
 <script setup>
-import { ref, reactive,watch } from 'vue';
+import { ref, reactive,watch,computed, onMounted } from 'vue';
 import Planner from './components/Planner.vue';
 import ControlPlanner from './components/ControlPlanner.vue';
 import iconExpensive from './assets/img/nuevo-gasto.svg';
 import Modal from './components/Modal.vue';
 import Expend from './components/Expend.vue';
+import Filter from './components/Filter.vue';
 import { random } from './helpers/index';
 
 const planner = ref(0);
 const aviable = ref(0);
 const spent = ref(0);
+const filter=ref("")
 const modal = reactive({
   show: false,
   animate: false,
@@ -41,6 +43,38 @@ watch(modal, () => {
     resetModal()
   }
 })
+
+
+watch( expen,() => {
+  addLocalStorage();
+}, { deep: true });
+
+watch(planner, () => {
+  addLocalStorage();
+}, { deep: true });
+
+onMounted(() => {
+  const expenStorage = localStorage.getItem('expen');
+  if (expenStorage) {
+    expen.value = JSON.parse(expenStorage);
+  } else {
+    expen.value = [];
+  }
+});
+
+onMounted(() => {
+  const plannerStorage = localStorage.getItem('planner'); 
+  if (plannerStorage) {
+    planner.value = Number(plannerStorage);
+    aviable.value = Number(plannerStorage);
+  }
+});
+
+const addLocalStorage = () => {
+  localStorage.setItem('planner', JSON.stringify(planner.value))
+  localStorage.setItem('expen', JSON.stringify(expen.value))
+}
+
 
 
 const validatePlanner = (count) => {
@@ -102,6 +136,20 @@ const deleted = (id) => {
     closeModal()
   }
 }
+const computedFilter = computed(() => {
+  if (filter.value) {
+    return expen.value.filter(exp=>exp.category===filter.value)
+  } else {
+    return expen.value
+  }
+})
+const reset = () => {
+  if (confirm('reseat ?')) {
+    planner.value = 0
+    expen.value=[]
+    
+  }
+}
 </script>
 
 <template>
@@ -118,10 +166,12 @@ const deleted = (id) => {
     />
 <div v-else>
   <ControlPlanner
+  @reset="reset"
   :planner="planner"
   :aviable="aviable"
   :spent="spent"
   />
+
     </div>
   </div>
   
@@ -129,9 +179,12 @@ const deleted = (id) => {
    <div 
        v-if="planner > 0"
        class="expen-list container ">
-       <h2>{{ expen.length >0?'expend':'there are no expenses'}}</h2>
+      <Filter
+      v-model:filter="filter"
+      />
+       <h2>{{ computedFilter.length >0?'expend':'there are no expenses'}}</h2>
              <Expend
-             v-for="exp in expen"
+             v-for="exp in computedFilter"
              :key="exp.id"
              :exp="exp"
                 @select-Planner="selectPlanner"
