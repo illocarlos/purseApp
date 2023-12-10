@@ -11,12 +11,14 @@ const prop = defineProps({
     aviable: {
         type: Number,
         required: true, 
-    }
+    },
+    spent:{
+    type: Number,
+    required: true,
+        
+    },
+
 })
-
-
-
-
 
 
  </script>
@@ -48,7 +50,7 @@ class="btn-control"
 
     <p>
        <span> expenses:</span>
-        ${{ }}
+        {{ formate(spent) }}
     </p> 
 </div>
   </div>

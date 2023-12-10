@@ -1,0 +1,53 @@
+.expen{
+@include rowJB;
+align-items: center;
+margin-bottom: 4rem;
+cursor: pointer;
+transition: 1s ease;
+.expe-conten{
+gap: 2rem;
+align-items: center;
+display: flex;
+
+
+.iconImg{
+width: 6rem;
+}
+.details{
+
+.details p{
+    margin: 0 0 1rem 0;
+}
+.category{
+color: var(--green);
+font-weight: 900;
+text-transform: uppercase;
+}
+.name{
+color: var(--greyB);
+font-size: 2.2rem;
+font-weight: 700;
+}
+.date{
+    color: var(--greyB);
+font-size: 1.6rem;
+font-weight: 900;
+    span{
+font-weight: 400;
+
+    }
+}
+}
+
+}
+
+    .quantity{
+font-size:3rem;
+font-weight: 900;
+margin: 0;
+    }
+}
+
+.expen:hover{
+background-color: rgba(255, 166, 0, 0.373);
+}

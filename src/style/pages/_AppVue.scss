@@ -1,3 +1,9 @@
+
+.fixed{
+    overflow: hidden;
+    height: 100vh;
+}
+
 header{
 background-color: var( --green);
 }
@@ -39,4 +45,20 @@ right: 5rem;
     width: 6rem;
     
 }
+.expen-list{
+   margin-top: 15rem;
+   text-transform: uppercase;
+    
+
+h2{
+font-weight: 900;
+color: var(--blue);
+text-align: center;
+}
+p{
+
+}
+    
+}
+
 
